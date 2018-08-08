@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="2.5dp"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="40dp"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            tools:ignore="ContentDescription"
+            android:id="@+id/switch_station"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/switch_station" />
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/shadow"
+            android:textSize="15sp"
+            android:id="@+id/from_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/from_clear"
+            android:layout_toEndOf="@id/switch_station"
+            android:hint="From"
+            android:maxLines="1"
+            android:textColor="@color/title_color"
+            android:textColorHint="@color/sub_title_color"
+            android:textCursorDrawable="@drawable/cursor"
+            android:theme="@style/SearchEditText" />
+
+
+        <ImageView
+            tools:ignore="ContentDescription"
+            android:id="@id/from_clear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_cancel"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!--Middle layout-->
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:background="@android:color/white"
+        android:id="@+id/expandable_layout_0"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:el_duration="500"
+        app:el_expanded="false">
+
+        <RelativeLayout
+            android:padding="2.5dp"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:src="@drawable/remove_bypass"
+                android:id="@+id/remove_bypass"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                />
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/shadow"
+                android:textSize="15sp"
+                android:id="@+id/via_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/via_clear"
+                android:layout_toEndOf="@id/remove_bypass"
+                android:hint="Via"
+                android:maxLines="1"
+                android:textColor="@color/title_color"
+                android:textColorHint="@color/sub_title_color"
+                android:textCursorDrawable="@drawable/cursor"
+                android:theme="@style/SearchEditText" />
+
+
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:id="@id/via_clear"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_cancel"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    <!--Last layout-->
+
+    <RelativeLayout
+        android:padding="2.5dp"
+        android:id="@+id/last_layout"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="40dp"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            tools:ignore="ContentDescription"
+            android:id="@+id/add_bypass_station"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/add_station" />
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/shadow"
+            android:textSize="15sp"
+            android:id="@+id/to_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/to_clear"
+            android:layout_toEndOf="@id/add_bypass_station"
+            android:hint="To"
+            android:maxLines="1"
+            android:textColor="@color/title_color"
+            android:textColorHint="@color/sub_title_color"
+            android:textCursorDrawable="@drawable/cursor"
+            android:theme="@style/SearchEditText" />
+
+
+        <ImageView
+            tools:ignore="ContentDescription"
+            android:id="@id/to_clear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_cancel"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

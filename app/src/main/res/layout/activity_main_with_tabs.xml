@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/search_bar_fragment"
+            android:name="code.cameo.placeautocomplete.SearchBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:layout="@layout/fragment_search_box" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_below="@id/search_bar_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darker_separator_line"/>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:layout_below="@id/separator"
+            android:id="@+id/tl_3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffffff"
+            tl:tl_iconGravity="LEFT"
+            tl:tl_iconHeight="18dp"
+            tl:tl_iconMargin="5dp"
+            tl:tl_iconWidth="18dp"
+            tl:tl_indicator_bounce_enable="true"
+            tl:tl_indicator_color="#2C97DE"
+            tl:tl_indicator_gravity="BOTTOM"
+            tl:tl_textSelectColor="#2C97DE"
+            tl:tl_textUnselectColor="#66000000"
+            tl:tl_textsize="15sp"
+            tl:tl_underline_gravity="BOTTOM" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>

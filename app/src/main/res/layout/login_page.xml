@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="383sp"
+        android:layout_height="326dp"
+        android:layout_gravity="center"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/tglive_logo"
+            android:layout_width="267sp"
+            android:layout_height="258sp"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/tglive_logo"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="71sp"
+        android:layout_gravity="center"
+        android:background="@drawable/login_email"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/email_image"
+            android:layout_width="53sp"
+            android:layout_height="66sp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/email_id"
+            android:layout_width="match_parent"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/email_image"
+            android:hint="Email ID"
+            android:singleLine="true"
+            android:textColor="@color/mapboxWhite"
+            android:textColorHint="@color/mapboxWhite"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textSize="15sp"
+            android:theme="@style/SearchEditText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="71sp"
+        android:layout_gravity="center"
+        android:background="@drawable/login_pass"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/password_image"
+            android:layout_width="53sp"
+            android:layout_height="66sp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/password_id"
+            android:layout_width="match_parent"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/password_image"
+            android:hint="Password"
+            android:singleLine="true"
+            android:textColor="@color/mapboxWhite"
+            android:textColorHint="@color/mapboxWhite"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textSize="15sp"
+            android:theme="@style/SearchEditText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="71sp"
+        android:layout_gravity="center"
+
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="0sp"
+        android:paddingEnd="0sp">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/remember_me_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:text="Remember me"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="10sp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/forgot_password_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/remember_me_text"
+            android:paddingStart="15sp"
+            android:text="Forgot Password?"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="71dp"
+        android:layout_gravity="center"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="10sp">
+
+        <TextView
+            android:id="@+id/no_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="57dp"
+            android:text="NO ACCOUNT?"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="17sp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/no_account_text"
+            android:paddingStart="5sp"
+            android:text="SIGN UP"
+            android:textStyle="bold"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="319sp"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:elevation="0sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="0sp">
+
+        <TextView
+            android:id="@+id/terms1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="By using TG LIVE you agree to accept our"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="9sp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/terms2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/terms1"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="5sp"
+            android:paddingTop="5sp"
+            android:text="Terms of use &amp; Privacy Policy"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

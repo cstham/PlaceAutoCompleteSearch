@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:fitsSystemWindows="true"
+
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--android:fitsSystemWindows="true" is used to ensure that status bar is completely removed properly-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/main_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/search_bar_fragment2"
+            android:name="code.cameo.placeautocomplete.MainSearchBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:layout="@layout/main_fragment_search_box" />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detailed_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <fragment
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:id="@+id/detailed_edit_box_fragment"
+            android:name="code.cameo.placeautocomplete.Adv_SearchBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/detailed_edit_box" />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="code.cameo.placeautocomplete.MapsActivity"
+        map:cameraTargetLat="3.14615098121251"
+        map:cameraTargetLng="101.71067476272583"
+        map:cameraZoom="13.9"/>
+
+    <LinearLayout
+        android:id="@+id/moreInfo_linearLayout"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shadow"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    <fragment
+        android:id="@+id/moreInfo_fragment"
+        android:name="code.cameo.placeautocomplete.MoreInfoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/more_info" />
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
